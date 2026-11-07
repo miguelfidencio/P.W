@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Cartas - Maior Valor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra superior e controle do placar -->
+  <header class="navbar">
+    <div class="brand">Jogo de Cartas</div>
+    <div class="scoreboard">
+      <span>Jogador: <strong id="score-player">0</strong></span>
+      <span>Computador: <strong id="score-cpu">0</strong></span>
+    </div>
+    <div class="actions">
+      <button id="btn-reset-score">Resetar Placar</button>
+      <button id="btn-restart">Nova Partida</button>
+    </div>
+  </header>
+
+  <!-- Área principal do duelo -->
+  <main class="game-container">
+    <div class="status-panel">
+      <div id="game-status" class="status-msg">Escolha uma carta da sua mão para jogar</div>
+    </div>
+
+    <!-- Arena de batalha -->
+    <section class="battle-arena">
+      <div class="played-slot">
+        <span class="slot-label">Computador</span>
+        <div id="card-cpu" class="card-placeholder">?</div>
+      </div>
+      <div class="versus">VS</div>
+      <div class="played-slot">
+        <span class="slot-label">Você</span>
+        <div id="card-player" class="card-placeholder">?</div>
+      </div>
+    </section>
+
+    <!-- Interação do jogador -->
+    <section class="hand-section">
+      <div class="hand-header">
+        <span>Sua Mão (<span id="hand-count">0</span> cartas restantes)</span>
+      </div>
+      <div id="player-hand" class="hand-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
